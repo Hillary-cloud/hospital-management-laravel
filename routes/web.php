@@ -19,7 +19,7 @@ use App\Http\Controllers\AdminController;
 //     return view('welcome');
 // });
 
-Route::get('/home', [HomeController::class, 'redirect'])->middleware(['auth','verified']);
+Route::get('/home', [HomeController::class, 'redirect']);
 
 Route::get('/', [HomeController::class, 'index']);
 
