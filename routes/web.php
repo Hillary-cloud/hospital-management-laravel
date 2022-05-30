@@ -19,9 +19,14 @@ use App\Http\Controllers\AdminController;
 //     return view('welcome');
 // });
 
-Route::get('/home', [HomeController::class, 'redirect']);
+Route::get('/home', [HomeController::class, 'redirect'])->middleware(['auth','verified']);
 
 Route::get('/', [HomeController::class, 'index']);
+
+Route::get('my_appointment', [HomeController::class, 'show']);
+Route::post('my_appointment', [HomeController::class, 'appointment']);
+Route::get('cancel/{id}', [HomeController::class, 'cancel']);
+
 
 Route::middleware([
     'auth:sanctum',
@@ -39,3 +44,6 @@ Route::get('/doctor_list', [AdminController::class, 'doctorList']);
 Route::get('/edit_doctor/{id}', [AdminController::class, 'editDoctor']);
 Route::put('/edit_doctor/{id}', [AdminController::class, 'updateDoctor']);
 Route::get('/delete_doctor/{id}', [AdminController::class, 'deleteDoctor']);
+Route::get('/appointment', [AdminController::class, 'appointment']);
+Route::get('/approve/{id}', [AdminController::class, 'approve']);
+Route::get('/decline/{id}', [AdminController::class, 'decline']);
