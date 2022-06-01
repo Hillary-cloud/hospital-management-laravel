@@ -80,7 +80,7 @@
                                @php
                                $i = 1;
                                @endphp
-                                <table class="table text-light">
+                                <table class="table text-light table-responsive">
                                     <tr>
                                         <th>#</th>
                                         <th>Image</th>
