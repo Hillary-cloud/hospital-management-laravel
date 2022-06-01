@@ -57,7 +57,7 @@
                          <td>{{$item->email}}</td>
                          <td>{{$item->phone}}</td>
                          <td>{{$item->date}}</td>
-                         <td>{{$item->doctor}}</td>
+                         <td>{{$item->name}}</td>
                          <td>{{$item->status}}</td>
                          <td>
                             <a href="approve/{{$item->id}}" class="btn btn-sm btn-primary">Approve</a>
