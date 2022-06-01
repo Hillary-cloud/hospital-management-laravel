@@ -39,7 +39,7 @@
                 @php
                     $i = 1;
                 @endphp
-                <table class="table text-light table-responsive">
+                <table class="table text-light">
                  <tr class="text-dark bg-light">
                      <th>#</th>
                      <th>Name</th>

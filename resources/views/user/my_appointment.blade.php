@@ -69,7 +69,7 @@
         <div class="collapse navbar-collapse" id="navbarSupport">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="{{url('/')}}">Home</a>
+              <a class="nav-link" href="{{url('/home')}}">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="">About Us</a>
@@ -114,11 +114,11 @@
         {{session('message')}}
     </div>
     @endif
-      <div class="col-lg-12 col-md-6 col-sm-12 col-xs-12" style="padding:50px">
+      <div class="col-md-12" style="padding:50px">
           @php
               $i = 1;
           @endphp
-          <table class="table table-striped table-responsive">
+          <table class="table table-striped">
               <tr>
                   <th>#</th>
                   <th>Name</th>
