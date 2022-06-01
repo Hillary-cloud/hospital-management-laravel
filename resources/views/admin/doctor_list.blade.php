@@ -35,7 +35,7 @@
                 {{session('message')}}
             </div>
             @endif
-            <table class="table text-light">
+            <table class="table text-light table-responsive">
                 <tr>
                     <th>#</th>
                     <th>Image</th>

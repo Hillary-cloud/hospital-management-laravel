@@ -114,11 +114,11 @@
         {{session('message')}}
     </div>
     @endif
-      <div class="col-md-12" style="padding:50px">
+      <div class="col-lg-12 col-md-6 col-sm-12 col-xs-12" style="padding:50px">
           @php
               $i = 1;
           @endphp
-          <table class="table table-striped">
+          <table class="table table-striped table-responsive">
               <tr>
                   <th>#</th>
                   <th>Name</th>
