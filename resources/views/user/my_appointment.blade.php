@@ -108,50 +108,7 @@
     </nav>
   </header>
 
-  {{-- <div class="container">
-    @if (session('message'))
-    <div class="alert alert-success">
-        {{session('message')}}
-    </div>
-    @endif
-      <div class="col-md-12" style="padding:50px">
-          @php
-              $i = 1;
-          @endphp
-          <table class="table table-striped">
-              <tr>
-                  <th>#</th>
-                  <th>Name</th>
-                  <th>Email</th>
-                  <th>Phone</th>
-                  <th>Date</th>
-                  <th>Doctor</th>
-                  <th>Status</th>
-                  <th>Action</th>
-              </tr>
-              @foreach ($appoint as $item)
-                  <tr>
-                      <td>{{$i++}}</td>
-                      <td>{{$item->name}}</td>
-                      <td>{{$item->email}}</td>
-                      <td>{{$item->phone}}</td>
-                      <td>{{$item->date}}</td>
-                      <td>{{$item->doctor}}</td>
-                      <td>{{$item->status}}</td>
-                      <td>
-                          <a href="cancel/{{$item->id}}" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to cancel this appointment?')">Cancel</a>
-                      </td>
-                  </tr>
-              @endforeach
-          
-          </table>
-      </div>
-  </div> --}}
-
   <div>
-    <style>
- 
-    </style>
    <div class="container" style="padding: 10px;">
        <div class="row">
            <div class="col-lg-12 col-md-12 col-sm-12">

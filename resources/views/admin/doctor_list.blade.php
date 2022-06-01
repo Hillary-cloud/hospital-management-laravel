@@ -28,7 +28,7 @@
       <!-- partial -->
       @include('admin.nav')
         <!-- partial -->
-        <div class="col-md-12" style="padding: 100px;">
+        {{-- <div class="col-md-12" style="padding: 100px;">
             
             @if (session('message'))
             <div class="alert alert-success">
@@ -60,7 +60,60 @@
                     </tr>
                 @endforeach
             </table>
-        </div>
+        </div> --}}
+
+
+        <div>
+          <div class="container" style="padding: 10px;">
+              <div class="row">
+                  <div class="col-lg-12 col-md-12 col-sm-12">
+                   <div class="panel panel-default">
+                       <div class="panel-heading">
+                               <div class="col-md-6">Doctor List</div>
+                       </div>
+                           <div class="panel-body">
+                               @if (session('message'))
+                                   <div class="alert alert-success">
+                                   {{ session('message') }}
+                                   </div>
+                               @endif
+                               @php
+                               $i = 1;
+                               @endphp
+                                <table class="table text-light">
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Image</th>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Address</th>
+                                        <th>Specialization</th>
+                                        <th>Action</th>
+                                    </tr>
+                                    @foreach ($doctors as $doctor)
+                                        <tr>
+                                            <td>{{$i++}}</td>
+                                            <td>{{$doctor->id}}</td>
+                                            <td><img src="doctorImage/{{$doctor->image}}" alt=""></td>
+                                            <td>{{$doctor->name}}</td>
+                                            <td>{{$doctor->email}}</td>
+                                            <td>{{$doctor->address}}</td>
+                                            <td>{{$doctor->specialization}}</td>
+                                            <td>
+                                                <a href="edit_doctor/{{$doctor->id}}" class="btn btn-primary btn-sm">Edit</a>
+                                                <a href="delete_doctor/{{$doctor->id}}" onclick="return confirm('You are about to delete this doctor')" class="btn btn-danger btn-sm">Delete</a>
+                                            </td>
+                                        </tr>
+                                    @endforeach
+                                </table>
+                              {{-- {{$appoint->links()}} --}}
+                           </div>
+                       </div>
+                   </div>
+              </div>
+          </div>
+       </div>
+       
 
     <!-- container-scroller -->
    @include('admin.script')
