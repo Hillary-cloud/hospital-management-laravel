@@ -93,7 +93,6 @@
                                     @foreach ($doctors as $doctor)
                                         <tr>
                                             <td>{{$i++}}</td>
-                                            <td>{{$doctor->id}}</td>
                                             <td><img src="doctorImage/{{$doctor->image}}" alt=""></td>
                                             <td>{{$doctor->name}}</td>
                                             <td>{{$doctor->email}}</td>
